@@ -4,7 +4,7 @@ exports.home = async (req, res, next) => {      // read
  
     const events = await event.find(req.query)
     .select("-__v")
-    // .select("-_id")
+    .select("-_id")
     .select("-tag")
     .select("-createdAt")
     .select("-slug");
